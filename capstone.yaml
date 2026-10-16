@@ -1,0 +1,41 @@
+
+project:
+  name: "Usage Metering & Billing Engine"
+  track: "FlyRank Backend Track"
+  description: "A multi-tenant usage metering service with subscription quotas and usage-cost calculation."
+
+repository:
+  url: "https://github.com/Benzyma99/flyrank-capstone-metering-billing"
+  language: "Python"
+
+technology:
+  framework: "FastAPI"
+  database: "SQLite for local development"
+  orm: "SQLAlchemy"
+  migrations: "Alembic"
+  testing: "pytest"
+
+implemented:
+  - "Health endpoint"
+  - "Tenant, plan, subscription, and usage-event models"
+  - "API-call and aggregate AI-token usage recording"
+  - "Idempotency-key handling"
+  - "Monthly usage quota enforcement"
+  - "Inactive-subscription rejection"
+  - "Integer micro-USD cost calculation"
+  - "Pricing version stored with usage events"
+  - "Database migration for pricing fields"
+  - "Automated pricing and metering tests"
+
+verification:
+  last_confirmed_test_result: "11 passed, 1 warning"
+  migration_revision: "e1c39e5fc31d"
+
+pending:
+  - "Stripe test-mode Checkout integration"
+  - "Verified and deduplicated Stripe webhooks"
+  - "Background job with retries and failure alerts"
+  - "Detailed input, cached-input, and output-token metering"
+  - "Final integration testing and deployment review"
+
+status: "In progress"
